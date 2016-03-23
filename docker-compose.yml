@@ -1,0 +1,10 @@
+web:
+  build: .
+  ports:
+    - 80
+  labels:
+    lb.public: "true"
+  links:
+    - redis
+redis:
+  image: redis
